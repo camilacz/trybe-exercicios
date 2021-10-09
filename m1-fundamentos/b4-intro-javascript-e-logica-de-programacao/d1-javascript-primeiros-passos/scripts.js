@@ -75,3 +75,23 @@ if (grade >= 0 && grade <= 100) {
 } else {
   console.log("Error: unexpected value in 'grade'");
 }
+
+//atividade 8
+const nA = 85;
+const nB = 958;
+const nC = 13;
+
+if (nA % 2 === 0 || nB % 2 === 0 || nC % 2 === 0) {
+  console.log(true);
+} else {
+  console.log(false);
+}
+
+//atividade 9
+let theresOdd = true;
+
+if (nA % 2 === 0 && nB % 2 === 0 && nC % 2 === 0) {
+  theresOdd = false;
+}
+
+console.log(theresOdd);
