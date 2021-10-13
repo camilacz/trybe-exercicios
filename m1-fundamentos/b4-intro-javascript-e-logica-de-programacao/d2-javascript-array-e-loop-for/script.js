@@ -78,3 +78,50 @@ for (i = 0; i < numeros.length; i += 1) {
 }
 
 console.log(divisão);
+
+
+
+
+//BÔNUS
+
+//Exercício 1 - imprima array 'numbers' em ordem crescente
+//Código do course:
+for (let index = 1; index < numbers.length; index += 1) {
+  for (let index2 = 0; index2 < index; index2 += 1) {
+    if (numbers[index] < numbers[index2]) {
+      let position = numbers[index];
+      numbers[index] = numbers[index2];
+      numbers[index2] = position;
+    }
+  }
+}
+
+console.log(numbers);
+
+//Exercício 2 - imprima array 'numbers' em ordem decrescente
+for (let index = 1; index < numbers.length; index++) {
+  for (let index2 = 0; index2 < index; index2++) {
+    if (numbers[index] > numbers[index2]) {
+      let position = numbers[index];
+      numbers[index] = numbers[index2];
+      numbers[index2] = position;
+    }
+  }
+}
+
+console.log(numbers);
+
+
+//Exercício 3 - imprima nova array com resultado multiplicação dos elementos da array 'numbers' em pares
+numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let times = [];
+
+for (let i = 0; i < numbers.length; i++) {
+  if (i + 1 !== numbers.length) {
+    times.push(numbers[i] * numbers[i + 1]);
+  } else {
+    times.push(numbers[i] * 2);
+  }
+}
+
+console.log(times);
