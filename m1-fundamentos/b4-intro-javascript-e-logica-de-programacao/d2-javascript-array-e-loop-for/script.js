@@ -25,3 +25,27 @@ if (media > 20) {
 } else {
   console.log('Valor menor ou igual a 20');
 }
+
+//Exercício 5 - com 'for' descubra maior valor e imprima-o
+let maior = numbers[0];
+
+for (let index = 1; index < numbers.length; index += 1) {
+  if (numbers[index] > maior) {
+    maior = numbers[index];
+  }
+}
+
+console.log(maior);
+
+//Exercício 6 - imprima quantos valores ímpares há
+let impares = 0;
+for (i = 0; i < numbers.length; i += 1) {
+  if (numbers[i] % 2 != 0) {
+    impares += 1;
+  }
+}
+if (impares > 0) {
+  console.log(impares + " números ímpares");
+} else {
+  console.log('Nenhum valor ímpar encontrado')
+}
