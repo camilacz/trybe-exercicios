@@ -12,4 +12,16 @@ for (let i = 0; i < numbers.length; i += 1) {
   soma += numbers[i];
 }
 
-console.log(soma)
+console.log(soma);
+
+//Exercício 3 - calcule e imprima a média aritmética da array
+let media = soma / numbers.length;
+
+console.log(media);
+
+//Exercício 4
+if (media > 20) {
+  console.log('Valor maior que 20');
+} else {
+  console.log('Valor menor ou igual a 20');
+}
