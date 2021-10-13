@@ -49,3 +49,32 @@ if (impares > 0) {
 } else {
   console.log('Nenhum valor ímpar encontrado')
 }
+
+//Exercício 7 - imprima menor valor da array
+let menor = numbers[0];
+
+for (i = 1; i < numbers.length; i += 1) {
+  if (numbers[i] < menor) {
+    menor = numbers[i];
+  }
+}
+
+console.log(menor);
+
+//Exercício 8 - crie e imprima array de 1 até 25 usando 'for'
+let numeros = [];
+
+for (let n = 1; n <= 25; n += 1) {
+  numeros.push(n);
+}
+
+console.log(numeros);
+
+//Exercício 9 - imprima divisão de 'numeros' por 2
+let divisão = [];
+
+for (i = 0; i < numeros.length; i += 1) {
+  divisão.push(numeros[i] / 2);
+}
+
+console.log(divisão);
