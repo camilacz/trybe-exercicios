@@ -73,8 +73,27 @@ console.log(longestName(arrTest));
 
 //Exercício 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
 function repetition(numbers) {
+  let mostRepeated = numbers[0];
+  let timesRepeated = 0;
 
+  for (let n = 0; n < numbers.length; n++) {
+    let repeat = 0;
+    for (let number of numbers) {
+      if (numbers[n] === number) {
+        repeat += 1;
+      }
+    }
+    if (repeat > timesRepeated) {
+      mostRepeated = numbers[n];
+      timesRepeated = repeat;
+    }
+  }
+
+  return mostRepeated;
 }
+
+let num = [2, 3, 2, 5, 8, 2, 3];
+console.log(repetition(num));
 
 
 //Exercício 6 - Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
