@@ -53,3 +53,22 @@ function smallest(numbers) {
 
 let test = [2, 4, 6, 7, 10, 0, -3];
 console.log(smallest(test));
+
+
+//Exercício 4 - Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+function longestName(names) {
+  let longest = names[0];
+
+  for (let i in names) {
+    if (names[i].length > longest.length) {
+      longest = names[i];
+    }
+  }
+  return longest;
+}
+
+let arrTest = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+console.log(longestName(arrTest));
+
+
+//Exercício 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
