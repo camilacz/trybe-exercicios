@@ -88,3 +88,23 @@ function sumAll(n) {
 }
 
 console.log(sumAll(5));
+
+
+//Exercício 7 - Crie uma função que receba uma string word e outra string ending . Verifique se a string ending é o final da string word . Considere que a string ending sempre será menor que a string word .
+function sameEnding(word, ending) {
+  let reverseWord = word.split('').reverse().join('');
+  let reverseEnding = ending.split('').reverse().join('');
+  let endSame = true;
+
+  for (let i = 0; i < ending.length; i++) {
+    if (reverseWord[i] !== reverseEnding[i]) {
+      endSame = false;
+      break;
+    }
+  }
+
+  return endSame;
+}
+
+console.log(sameEnding('trybe', 'be'));
+console.log(sameEnding('joaofernando', 'fernan'));
