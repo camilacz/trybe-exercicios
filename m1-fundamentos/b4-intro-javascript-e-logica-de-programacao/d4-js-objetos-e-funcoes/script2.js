@@ -72,3 +72,19 @@ console.log(longestName(arrTest));
 
 
 //Exercício 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+function repetition(numbers) {
+
+}
+
+
+//Exercício 6 - Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
+function sumAll(n) {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    sum += i;
+  }
+
+  return sum;
+}
+
+console.log(sumAll(5));
