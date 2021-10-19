@@ -85,6 +85,15 @@
           p.innerText = p.innerText.toUpperCase();
         }
         upperCaseParagraph();
+
+        // Exercício 6
+        function printAllParagraphs() {
+          let paragraphs = document.getElementsByTagName('p');
+          for (let p in paragraphs) {
+            console.log(paragraphs[p].innerHTML);
+          }
+        }
+        printAllParagraphs();
     </script>
   </body>
 </html>
