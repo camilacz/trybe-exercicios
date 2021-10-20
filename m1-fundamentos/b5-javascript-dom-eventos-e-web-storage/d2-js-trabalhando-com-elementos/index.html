@@ -101,21 +101,28 @@
       
       let numbersList = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
 
-      for (let number of numberList) {
+      for (let number of numbersList) {
         let listItem = document.createElement('li');
         listItem.innerHTML = number;
         unorderedList.appendChild(listItem);
+        console.log(number);
       }
 
       // 9. Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
       for (let i = 0; i < 3; i += 1) {
         let tagH3 = document.createElement('h3');
+        tagH3.innerText = i + 1;
         main.appendChild(tagH3);
       }
 
       // 1.2 Adicione a classe title na tag h1 criada;
       h1.className = 'title';
-      
+
+      // 2.2 Adicione a classe description nas 3 tags h3 criadas;
+      let tagsH3 = document.getElementsByTagName('h3');
+      for (let i = 0; i < 3; i += 1) {
+        tagsH3[i].className = 'description';
+      }
     </script>
   </body>
 </html>
