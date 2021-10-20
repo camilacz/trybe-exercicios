@@ -64,7 +64,10 @@
       let body = document.querySelector('body');
       body.appendChild(title);
 
-      
+      // 2. Adicione a tag main com a classe main-content como filho da tag body;
+      let main = document.createElement('main');
+      main.className = 'main-content';
+      body.appendChild(main);
     </script>
   </body>
 </html>
