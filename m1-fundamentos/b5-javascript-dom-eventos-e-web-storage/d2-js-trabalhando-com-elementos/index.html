@@ -105,7 +105,6 @@
         let listItem = document.createElement('li');
         listItem.innerHTML = number;
         unorderedList.appendChild(listItem);
-        console.log(number);
       }
 
       // 9. Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
@@ -116,13 +115,17 @@
       }
 
       // 1.2 Adicione a classe title na tag h1 criada;
-      h1.className = 'title';
+      title.className = 'title';
 
       // 2.2 Adicione a classe description nas 3 tags h3 criadas;
       let tagsH3 = document.getElementsByTagName('h3');
       for (let i = 0; i < 3; i += 1) {
         tagsH3[i].className = 'description';
       }
+
+      // 2.3 Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild();
+      let secondSection = document.getElementsByClassName('left-content')[0];
+      main.removeChild(secondSection);
     </script>
   </body>
 </html>
