@@ -123,9 +123,12 @@
         tagsH3[i].className = 'description';
       }
 
-      // 2.3 Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild();
+      // 3.2 Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild();
       let secondSection = document.getElementsByClassName('left-content')[0];
       main.removeChild(secondSection);
+
+      // 4.2 Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section;
+      section3.style.marginRight = 'auto';
     </script>
   </body>
 </html>
