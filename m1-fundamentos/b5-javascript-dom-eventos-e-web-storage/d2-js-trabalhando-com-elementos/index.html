@@ -15,11 +15,11 @@
       }
 
       .main-content {
-        background-color: yellow;
+        background-color: orange;
       }
 
       .main-content .center-content {
-        background-color: red;
+        background-color: blue;
         width: 50%;
         margin-left: auto;
         margin-right: auto;
@@ -73,7 +73,11 @@
       let section = document.createElement('section');
       section.className = 'center-content';
       main.appendChild(section);
-      
+
+      // 4. Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+      let paragraph = document.createElement('p');
+      paragraph.innerText = 'algum texto';
+      section.appendChild(paragraph);
     </script>
   </body>
 </html>
