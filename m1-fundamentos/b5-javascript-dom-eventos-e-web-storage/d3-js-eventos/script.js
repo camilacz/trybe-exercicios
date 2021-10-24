@@ -72,7 +72,7 @@ function highlightHolidays() {
 highlightHolidays();
 
 
-// Exercício 4 - same as 3rd one ¬¬
+// Exercício 4 - same as the 2nd one ¬¬
 function fridayButton(btnName) {
   let container = document.querySelector('.buttons-container');
   let newBtn = document.createElement('button');
@@ -82,3 +82,23 @@ function fridayButton(btnName) {
 }
 
 fridayButton('Sexta-feira');
+
+
+// Exercício 5 - wish I could use the same function from exercise 3
+function showFridays() {
+  let fridayBtn = document.querySelector('#btn-friday');
+  let fridays = document.querySelectorAll('.friday');
+  let newColor = 'rgb(240, 217, 255)';
+
+  fridayBtn.addEventListener('click', function() {
+    for (let i = 0; i < fridays.length; i += 1) {
+      if (fridays[i].style.backgroundColor === newColor) {
+        fridays[i].style.backgroundColor = 'rgb(238, 238, 238)';
+      } else {
+        fridays[i].style.backgroundColor = newColor;
+      }
+    }
+  });
+}
+
+showFridays();
