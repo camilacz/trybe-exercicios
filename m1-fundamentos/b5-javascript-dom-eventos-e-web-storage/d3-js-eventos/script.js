@@ -70,3 +70,15 @@ function highlightHolidays() {
 }
 
 highlightHolidays();
+
+
+// Exercício 4 - same as 3rd one ¬¬
+function fridayButton(btnName) {
+  let container = document.querySelector('.buttons-container');
+  let newBtn = document.createElement('button');
+  newBtn.id = 'btn-friday';
+  newBtn.innerHTML = btnName;
+  container.appendChild(newBtn);
+}
+
+fridayButton('Sexta-feira');
