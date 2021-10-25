@@ -51,22 +51,6 @@ function createBtn(buttonName) {
 
 createBtn('Feriados');
 
-<<<<<<< HEAD
-
-// Exercício 3
-function showHolidays() {
-  let holidayButton = document.querySelector('#btn-holiday');
-  let holidays = document.querySelectorAll('.holiday');
-  let originalBackgroundColor = 'rgb(238,238,238)';
-  let newBackgroundColor = 'rgb(213, 213, 213)';
-
-  holidayButton.addEventListener('click', function() {
-    for (let i = 0; i < holidays.length; i += 1) {
-      if (holidays[i].style.backgroundColor === newBackgroundColor) {
-        holidays[i].style.backgroundColor = originalBackgroundColor;
-      } else {
-        holidays[i].style.backgroundColor = newBackgroundColor;
-=======
 // Exercício 3
 function highlightHolidays() {
   let holidayBtn = document.querySelector('#btn-holiday');
@@ -80,15 +64,11 @@ function highlightHolidays() {
         holidaysList[i].style.backgroundColor = originalColor;
       } else {
         holidaysList[i].style.backgroundColor = newColor;
->>>>>>> 763697d2fada7536d4b66f166dd4224788dd5a24
       }
     }
   })
 }
 
-<<<<<<< HEAD
-showHolidays();
-=======
 highlightHolidays();
 
 
@@ -122,4 +102,46 @@ function showFridays() {
 }
 
 showFridays();
->>>>>>> 763697d2fada7536d4b66f166dd4224788dd5a24
+
+// Exercício 6
+function zoomInDay() {
+  let daysList = document.querySelector('#days');
+
+  daysList.addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '35px';
+  })
+}
+
+function zoomOutDay() {
+  let daysList = document.querySelector('#days');
+
+  daysList.addEventListener('mouseout', function(event) {
+    event.target.style.fontSize = '20px';
+  })
+}
+
+zoomInDay();
+zoomOutDay();
+
+
+// Exercício 7
+function addTask(task) {
+  let tasksDiv = document.querySelector('.my-tasks');
+  let newTask = document.createElement('span');
+  newTask.innerText = task;
+  tasksDiv.appendChild(newTask);
+}
+
+addTask('cozinhar');
+
+
+// Exercício 8
+function taskColor(color) {
+  let parent = document.querySelector('.my-tasks');
+  let taskDiv = document.createElement('div');
+  taskDiv.className = 'task';
+  taskDiv.style.backgroundColor = color;
+  parent.appendChild(taskDiv);
+}
+
+taskColor('cyan');
