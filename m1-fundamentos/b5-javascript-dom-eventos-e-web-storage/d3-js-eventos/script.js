@@ -102,3 +102,46 @@ function showFridays() {
 }
 
 showFridays();
+
+// Exercício 6
+function zoomInDay() {
+  let daysList = document.querySelector('#days');
+
+  daysList.addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '35px';
+  })
+}
+
+function zoomOutDay() {
+  let daysList = document.querySelector('#days');
+
+  daysList.addEventListener('mouseout', function(event) {
+    event.target.style.fontSize = '20px';
+  })
+}
+
+zoomInDay();
+zoomOutDay();
+
+
+// Exercício 7
+function addTask(task) {
+  let tasksDiv = document.querySelector('.my-tasks');
+  let newTask = document.createElement('span');
+  newTask.innerText = task;
+  tasksDiv.appendChild(newTask);
+}
+
+addTask('cozinhar');
+
+
+// Exercício 8
+function taskColor(color) {
+  let parent = document.querySelector('.my-tasks');
+  let taskDiv = document.createElement('div');
+  taskDiv.className = 'task';
+  taskDiv.style.backgroundColor = color;
+  parent.appendChild(taskDiv);
+}
+
+taskColor('cyan');
