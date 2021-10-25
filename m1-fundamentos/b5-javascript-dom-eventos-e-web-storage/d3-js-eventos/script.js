@@ -144,7 +144,7 @@ function taskColor(color) {
   parent.appendChild(taskDiv);
 }
 
-taskColor('cyan');
+taskColor('darkblue');
 
 
 // Exercício 9
@@ -162,3 +162,23 @@ function taskClass() {
 }
 
 taskClass();
+
+
+// Exercício 10
+function colorDay() {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let daysList = document.querySelector('#days');
+
+  daysList.addEventListener('click', function(event) {
+    let taskColor = selectedTask[0].style.backgroundColor;
+
+    if (event.target.style.color !== taskColor) {
+      event.target.style.color = selectedTask[0].style.backgroundColor;
+    } else {
+      event.target.style.color = 'rgb(119, 119, 119)';
+    }
+  })
+
+}
+
+colorDay();
