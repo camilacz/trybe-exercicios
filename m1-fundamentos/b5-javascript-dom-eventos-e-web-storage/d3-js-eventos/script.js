@@ -208,42 +208,10 @@ function addAppointment () {
       appointment.innerText = inputBox.value;
       taskList.appendChild(appointment);
       inputBox.value = '';
-    } else if (inputBox.value.length <= 0) {
+    } else if (event.key === 'Enter') {
       alert('ERRO: Compromisso sem nome!');
     }
   })
 }
 
 addAppointment();
-
-/*
-function addNewTask() {
-  let getInputField = document.querySelector('#task-input');
-  let addInputButton = document.querySelector('#btn-add');
-  let getTaskList = document.querySelector('.task-list');
-
-  addInputButton.addEventListener('click', function() {
-    if (getInputField.value.length > 0) {
-      let newLi = document.createElement('li');
-      newLi.innerText = getInputField.value;
-
-      getTaskList.appendChild(newLi);
-      getInputField.value = '';
-    } else {
-      alert('Error: Digite ao menos 1 caractere.');
-    }
-  })
-
-  getInputField.addEventListener('keyup', function(event) {
-    if (event.key === 'Enter' && getInputField.value.length > 0) {
-      let newLi = document.createElement('li');
-      newLi.innerText = getInputField.value;
-
-      getTaskList.appendChild(newLi);
-      getInputField.value = '';
-    }
-  });
-};
-
-addNewTask();
-*/
