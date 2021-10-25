@@ -145,3 +145,20 @@ function taskColor(color) {
 }
 
 taskColor('cyan');
+
+
+// Exercício 9
+function taskClass() {
+  let taskDiv = document.querySelector('.task');
+  let selectedTask = document.getElementsByClassName('task selected');
+
+  taskDiv.addEventListener('click', function(event) {
+    if (selectedTask.length === 0) {
+      event.target.className = 'task selected';
+    } else {
+      event.target.className = 'task';
+    }
+  });
+}
+
+taskClass();
