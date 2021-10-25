@@ -174,6 +174,7 @@ function colorDay() {
 
     if (event.target.style.color !== taskColor) {
       event.target.style.color = selectedTask[0].style.backgroundColor;
+      event.target.style.fontWeight = '600';
     } else {
       event.target.style.color = 'rgb(119, 119, 119)';
     }
@@ -182,3 +183,67 @@ function colorDay() {
 }
 
 colorDay();
+
+
+// BÔNUS
+function addAppointment () {
+  let inputBox = document.getElementById('task-input');
+  let addBtn = document.getElementById('btn-add');
+  let taskList = document.querySelector('.task-list');
+
+  addBtn.addEventListener('click', function() {
+    if (inputBox.value.length > 0) {
+      let appointment = document.createElement('li');
+      appointment.innerText = inputBox.value;
+      taskList.appendChild(appointment);
+      inputBox.value = '';
+    } else {
+      alert('ERRO: Compromisso sem nome!');
+    }
+  });
+
+  inputBox.addEventListener('keyup', function(event) {
+    if ((inputBox.value.length > 0) && (event.key === 'Enter')) {
+      let appointment = document.createElement('li');
+      appointment.innerText = inputBox.value;
+      taskList.appendChild(appointment);
+      inputBox.value = '';
+    } else if (inputBox.value.length <= 0) {
+      alert('ERRO: Compromisso sem nome!');
+    }
+  })
+}
+
+addAppointment();
+
+/*
+function addNewTask() {
+  let getInputField = document.querySelector('#task-input');
+  let addInputButton = document.querySelector('#btn-add');
+  let getTaskList = document.querySelector('.task-list');
+
+  addInputButton.addEventListener('click', function() {
+    if (getInputField.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    } else {
+      alert('Error: Digite ao menos 1 caractere.');
+    }
+  })
+
+  getInputField.addEventListener('keyup', function(event) {
+    if (event.key === 'Enter' && getInputField.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    }
+  });
+};
+
+addNewTask();
+*/
