@@ -6,7 +6,6 @@
   </head>
   <body>
     <fieldset id="personal-info">
-      <legend>sla</legend>
       <div>
         <label for="name">Nome</label>
         <input type="text" name="name" id="name" smaxlength="40" required>
@@ -25,12 +24,19 @@
       </div>
       <div>
         <label for="city">Cidade</label>
-        <input type="text" id="city" name="cidade" maxlength="28" required>
+        <input type="text" id="city" name="city" maxlength="28" required>
       </div>
       <div>
         <label for="state">Estado</label>
-        <input type="select" id="state" name="estado" required>
+        <select id="state" name="state" required>
+      </div>
+      <div>
+        <input type="radio" name="home" id="house" required>
+        <label for="house">Casa</label>
+        <input type="radio" name="home" id="apt">
+        <label for="apt">Apartamento</label>
       </div>
     </fieldset>
+    <script src="script.js"></script>
   </body>
 </html>
