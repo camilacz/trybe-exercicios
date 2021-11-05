@@ -18,7 +18,7 @@ const inputs = document.querySelectorAll('input');
 const textArea = document.querySelector('textarea');
 
 clearBtn.addEventListener('click', (event) => {
-  // event.preventDefault();
+  event.preventDefault();
   for (let i = 0; i < inputs.length; i += 1) {
     inputs[i].value = '';
   }
