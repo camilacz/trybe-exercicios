@@ -12,3 +12,15 @@ function stateOptions() {
 }
 
 stateOptions();
+
+const clearBtn = document.getElementById('clear-btn');
+const inputs = document.querySelectorAll('input');
+const textArea = document.querySelector('textarea');
+
+clearBtn.addEventListener('click', (event) => {
+  // event.preventDefault();
+  for (let i = 0; i < inputs.length; i += 1) {
+    inputs[i].value = '';
+  }
+  textArea.value = '';
+})
