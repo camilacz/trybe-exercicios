@@ -1,0 +1,42 @@
+body {
+  background-color: blanchedalmond;
+}
+
+header {
+  padding: 40px;
+  text-align: center;
+}
+
+form {
+  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 1%;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+fieldset {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.container {
+  margin-bottom: 30px;
+}
+
+.radio {
+  margin-right: 20px;
+  font-size: large;
+}
+
+.buttons {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+button {
+  margin-left: 10px;
+}
