@@ -21,6 +21,7 @@ const lesson3 = {
 // Exercício 1
 const addNewKey = (object, newKey, value) => object[newKey] = value;
 addNewKey(lesson2, 'turno', 'noite');
+console.log(lesson2);
 
 // Exercício 2
 const listKeys = object => Object.keys(object);
@@ -28,4 +29,8 @@ console.log(listKeys(lesson2));
 
 // Exercício 3
 const objectSize = obj => Object.keys(obj).length;
-console.log(objectSize(lesson1));
+console.log(objectSize(lesson2));
+
+// Exercício 4
+const listValues = obj => Object.values(obj);
+console.log(listValues(lesson2));
