@@ -54,3 +54,16 @@ console.log(totalStudents(allLessons));
 // Exercício 7
 const getValueByNumber = (obj, position) => Object.values(obj)[position];
 console.log(getValueByNumber(lesson1, 0));
+
+// Exercício 8
+const verifyPair = (obj, key, value) => {
+  const entries = Object.entries(obj);
+  let exist = false;
+  for (i in entries) {
+    if ((entries[i][0] === key) && (entries[i][1] === value)) exist = true;
+  }
+  return exist;
+}
+
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
