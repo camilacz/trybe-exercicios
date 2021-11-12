@@ -20,10 +20,12 @@ const lesson3 = {
 
 // Exercício 1
 const addNewKey = (object, newKey, value) => object[newKey] = value;
-
 addNewKey(lesson2, 'turno', 'noite');
 
 // Exercício 2
 const listKeys = object => Object.keys(object);
-
 console.log(listKeys(lesson2));
+
+// Exercício 3
+const objectSize = obj => Object.keys(obj).length;
+console.log(objectSize(lesson1));
