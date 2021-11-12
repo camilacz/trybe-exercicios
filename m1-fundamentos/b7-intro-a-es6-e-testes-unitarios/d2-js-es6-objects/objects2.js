@@ -19,6 +19,11 @@ const lesson3 = {
 };
 
 // Exercício 1
-const newKey = (object, newKey, value) => object[newKey] = value;
+const addNewKey = (object, newKey, value) => object[newKey] = value;
 
-newKey(lesson2, 'turno', 'noite');
+addNewKey(lesson2, 'turno', 'noite');
+
+// Exercício 2
+const listKeys = object => Object.keys(object);
+
+console.log(listKeys(lesson2));
