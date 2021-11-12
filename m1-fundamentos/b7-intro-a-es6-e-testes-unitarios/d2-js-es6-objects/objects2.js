@@ -50,3 +50,7 @@ const totalStudents = obj => {
 }
 
 console.log(totalStudents(allLessons));
+
+// Exercício 7
+const getValueByNumber = (obj, position) => Object.values(obj)[position];
+console.log(getValueByNumber(lesson1, 0));
