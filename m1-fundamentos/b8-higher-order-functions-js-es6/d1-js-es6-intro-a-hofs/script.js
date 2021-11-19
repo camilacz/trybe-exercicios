@@ -1,3 +1,5 @@
+// EXERCÍCIO 1
+
 const employeeInfo = (fullName) => {
   const email = `${fullName.replace(' ', '_').toLowerCase()}@trybe.com`;
   return { fullName, email };
@@ -13,3 +15,14 @@ const newEmployees = (callback) => {
 };
 
 console.log(newEmployees(employeeInfo));
+
+// EXERCÍCIO 2
+
+const checkNumbers = (number, random) => number === random;
+
+const randomNumber = (number, callback) => {
+  const random = Math.floor((Math.random() * 5) + 1);
+  return callback(number, random) ? 'Parabéns você ganhou!' : 'Tente novamente';
+}
+
+console.log(randomNumber(3, checkNumbers));
