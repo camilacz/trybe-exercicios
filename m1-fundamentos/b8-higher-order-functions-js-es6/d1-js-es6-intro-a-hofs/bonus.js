@@ -29,7 +29,7 @@ function dragonAttack() {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-console.log(`Dragon attack: ${dragonAttack()}`)
+/* console.log(`Dragon attack: ${dragonAttack()}`); */
 
 // Exercício 2
 function warriorAttack() {
@@ -38,7 +38,7 @@ function warriorAttack() {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-console.log(`Warrior attack: ${warriorAttack()}`);
+/* console.log(`Warrior attack: ${warriorAttack()}`); */
 
 // Exercício 3
 function mageAttack() {
@@ -60,7 +60,7 @@ function mageAttack() {
   return turnStats;
 }
 
-console.log(`Mage attack: ${mageAttack().damageDealt}`);
+/* console.log(`Mage attack: ${mageAttack().damageDealt}`); */
 
 // Parte II
 
@@ -89,4 +89,12 @@ const gameActions = {
     warrior.healthPoints -= dragonDmg;
     dragon.damage = dragonDmg;
   },
+
+  // Exercício 4
+  results: () => battleMembers,
 };
+
+gameActions.warriorTurn(warriorAttack);
+gameActions.mageTurn(mageAttack);
+gameActions.dragonTurn(dragonAttack);
+console.log(gameActions.results());
