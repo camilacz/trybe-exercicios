@@ -23,19 +23,41 @@ const dragon = {
 const battleMembers = { mage, warrior, dragon };
 
 // Exercício 1
-function dragonDamage() {
+function dragonAttack() {
   const min = 15;
   const max = dragon.strength;
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-console.log(dragonDamage())
+console.log(`Dragon attack: ${dragonAttack()}`)
 
 // Exercício 2
-function warriorDamage() {
+function warriorAttack() {
   const min = warrior.strength;
   const max = warrior.strength * warrior.weaponDmg;
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-console.log(warriorDamage());
+console.log(`Warrior attack: ${warriorAttack()}`);
+
+// Exercício 3
+function mageAttack() {
+  const mana = mage.mana;
+  const minDamage = mage.intelligence;
+  const maxDamage = minDamage * 2;
+
+  const turnStats = {
+    manaSpent: 0,
+    damageDealt: 'Não possui mana suficiente',
+  };
+
+  if (mana >= 15) {
+    const mageDamage = Math.floor(Math.random() * (maxDamage - minDamage + 1)) + minDamage;
+    turnStats.manaSpent = 15;
+    turnStats.damageDealt = mageDamage;
+  }
+
+  return turnStats;
+}
+
+console.log(`Mage attack: ${mageAttack().damageDealt}`);
