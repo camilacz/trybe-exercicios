@@ -61,3 +61,14 @@ function mageAttack() {
 }
 
 console.log(`Mage attack: ${mageAttack().damageDealt}`);
+
+// Parte II
+
+const gameActions = {
+  // Exercício 1
+  warriorTurn: (attack) => {
+    const warriorDmg = attack();
+    warrior.damage = warriorDmg;
+    dragon.healthPoints -= warriorDmg;
+  },
+};
