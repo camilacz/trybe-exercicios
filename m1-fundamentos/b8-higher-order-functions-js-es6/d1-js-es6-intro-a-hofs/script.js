@@ -26,3 +26,29 @@ const randomNumber = (number, callback) => {
 }
 
 console.log(randomNumber(3, checkNumbers));
+
+// EXERCÍCIO 3
+
+const checkAnswer = (rightAnswer, givenAnswer) => {
+  if (givenAnswer === rightAnswer) {
+    return 1;
+  } else if (givenAnswer === 'N.A') {
+    return 0;
+  }
+  return -0.5;
+};
+
+const hof = (answerKey, toVerify, callbackChecker) => {
+  let total = 0;
+
+  for (let i = 0; i < answerKey.length; i += 1) {
+    const result = callbackChecker(answerKey[i], toVerify[i]);
+    total += result;
+  }
+  return `Resultado final: ${total}`;
+}
+
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+console.log(hof(RIGHT_ANSWERS, STUDENT_ANSWERS, checkAnswer));
