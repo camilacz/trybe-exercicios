@@ -30,3 +30,6 @@
 
 5. Qual tipo de relacionamento a tabela `city` faz com a tabela `country`?
 	* N:1 (várias cidades pra um mesmo país)
+
+6. Qual tipo de relacionamento a tabela `country` faz com a tabela `city`?
+	* 1:N (o contrário, obviamente - um país, várias cidades)
