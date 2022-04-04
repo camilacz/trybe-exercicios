@@ -24,3 +24,6 @@
 		- Nota: permite nulos, tipo int;
 	```
 	![Configurações da tabela](table-config.png)
+
+4. Analise a tabela `city` e encontre a tabela à qual a coluna `country_id` faz referência
+	* `country_id` faz referência à tabela `country` (duh)
