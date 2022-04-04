@@ -33,3 +33,8 @@
 
 6. Qual tipo de relacionamento a tabela `country` faz com a tabela `city`?
 	* 1:N (o contrário, obviamente - um país, várias cidades)
+
+7. Analise as tabelas do banco sakila e encontre exemplos de um relacionamento **1:N** ou **N:1**
+	* **1:N** language => film
+	* **N:1** film => language
+	* Um exemplo é o suficiente 🤭
