@@ -27,3 +27,6 @@
 
 4. Analise a tabela `city` e encontre a tabela à qual a coluna `country_id` faz referência
 	* `country_id` faz referência à tabela `country` (duh)
+
+5. Qual tipo de relacionamento a tabela `city` faz com a tabela `country`?
+	* N:1 (várias cidades pra um mesmo país)
