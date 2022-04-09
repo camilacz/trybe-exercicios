@@ -12,7 +12,7 @@
 	  WHERE City = 'Berlin';
 	```
 
-2. Use the `NOT`keyword to select all records where `City` is NOT "Berlin"
+2. Use the `NOT` keyword to select all records where `City` is NOT "Berlin"
 	```sql
 	SELECT * FROM Customers
 	  WHERE NOT City = 'Berlin';
