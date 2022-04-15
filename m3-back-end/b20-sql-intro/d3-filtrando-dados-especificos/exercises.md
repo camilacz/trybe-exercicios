@@ -1,6 +1,6 @@
 # **Bloco 20 -** Introdução à SQL
 
-## DIA 2 - Encontrando dados em um banco de dados
+## DIA 3 - Filtrando dados de forma específica
 
 &nbsp;
 
