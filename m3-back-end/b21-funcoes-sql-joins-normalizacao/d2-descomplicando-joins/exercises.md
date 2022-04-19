@@ -83,9 +83,21 @@ USE Pixar;
 
     ```sql
     SELECT 
-        A.title, B.domestic_sales, B.international_sales
+        M.title, B.domestic_sales, B.international_sales
     FROM
         Movies AS M
             JOIN
         BoxOffice AS B ON M.id = B.movie_id;
+    ```
+
+2. Usando o `INNER JOIN`, faça uma busca que retorne o número de vendas para cada filme que possui um número maior de vendas internacionais do que vendas nacionais.
+
+    ```sql
+    SELECT 
+        M.title, B.domestic_sales, B.international_sales
+    FROM
+        Movies AS M
+            JOIN
+        BoxOffice AS B ON M.id = B.movie_id
+        where B.international_sales > B.domestic_sales;
     ```
