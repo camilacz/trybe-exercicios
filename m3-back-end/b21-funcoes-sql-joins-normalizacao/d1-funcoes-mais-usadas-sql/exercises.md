@@ -77,5 +77,100 @@
     SELECT JOB_ID, AVG(SALARY) AS AVERAGE_SALARY
     FROM hr.employees
     GROUP BY JOB_ID
-    HAVING JOB_ID <> 'IT_PROG';
+    HAVING JOB_ID <> 'IT_PROG'
+    ORDER BY AVERAGE_SALARY DESC;
+    ```
+
+10. Exiba a média salarial e o número de funcionários de todos os cargos, exceto de programadores (`IT_PROG`).
+
+    ```sql
+    SELECT DEPARTMENT_ID,
+        AVG(SALARY) AS AVERAGE_SALARY,
+        COUNT(*) AS NUMBER_OF_EMPLOYEES
+    FROM hr.employees
+    GROUP BY DEPARTMENT_ID
+    HAVING NUMBER_OF_EMPLOYEES > 10;
+    ```
+
+11. Atualize a coluna `PHONE_NUMBER`, de modo que todos os telefones iniciados por `515` agora inciem com `777`.
+
+    ```sql
+    SET sql_safe_updates = 0;
+
+    UPDATE hr.employees
+    SET PHONE_NUMBER = REPLACE(PHONE_NUMBER, '515', '777')
+    WHERE PHONE_NUMBER LIKE '515%';
+    ```
+
+12. Exiba apenas as informações dos funcionários cujo primerio nome tenha oito ou mais caracteres.
+
+    ```sql
+    SELECT * FROM hr.employees
+    WHERE CHAR_LENGTH(FIRST_NAME) >= 8;
+
+    -- LENGTH também funciona
+    ```
+
+13. Exiba as seguintes informações de cada funcionário:
+    * id
+    * primeiro nome
+    * ano no qual foi contratado
+
+    ```sql
+    SELECT EMPLOYEE_ID,
+           FIRST_NAME,
+           YEAR(HIRE_DATE) AS HIRE_YEAR
+    FROM hr.employees;
+    ```
+
+14. Exiba as seguintes informações de cada funcionário:
+    * id
+    * primeiro nome
+    * dia do mês que foi contratado
+
+    ```sql
+    SELECT EMPLOYEE_ID,
+      FIRST_NAME,
+        DAY(HIRE_DATE) AS HIRE_DAY
+    FROM hr.employees;
+    ```
+
+15. Exiba as seguintes informações sobre cada funcionário:
+    * id
+    * primeiro nome
+    * mês de contratação
+
+    ```sql
+    SELECT EMPLOYEE_ID,
+      FIRST_NAME,
+        MONTH(HIRE_DATE) AS HIRE_MONTH
+    FROM hr.employees;
+    ```
+
+16. Exiba os nomes dos funcionários em letra maiúscula.
+
+    ```sql
+    SELECT UCASE(CONCAT(FIRST_NAME, ' ', LAST_NAME)) AS EMPLOYEE_NAME
+    FROM hr.employees;
+    ```
+
+17. Exiba o sobrenome e a data de contratação de todos os funcionários contratados em julho de 1987.
+
+    ```sql
+    SELECT LAST_NAME,
+        HIRE_DATE
+    FROM hr.employees
+    WHERE HIRE_DATE LIKE '1987-07-%';
+    ```
+
+18. Exiba as seguintes informações de cada funcionário:
+    * nome
+    * sobrenome
+    * tempo que trabalha na empresa (em dias)
+
+    ```sql
+    SELECT FIRST_NAME,
+        LAST_NAME,
+            DATEDIFF(CURRENT_DATE(), HIRE_DATE) AS DAYS_WORKING
+    FROM hr.employees;
     ```
