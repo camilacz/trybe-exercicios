@@ -126,3 +126,45 @@ INSERT INTO BoxOffice(movie_id, rating, domestic_sales, international_sales)
     DELETE FROM Pixar.Movies
     WHERE director = 'Andrew Staton';
     ```
+
+&nbsp;
+
+### **Bônus:**
+
+8. Altere a classificação da tabela `BoxOffice` para 9.0 de todos os filmes que lucraram mais de 400 milhões no mercado interno.
+
+    ```sql
+    -- 1. Consegue ids dos dados
+    SELECT movie_id FROM Pixar.BoxOffice
+    WHERE domestic_sales > 400000000;
+
+    -- 2. Atualiza dados
+    UPDATE Pixar.BoxOffice
+    SET rating = 9.0
+    WHERE movie_id IN (6, 10);
+    ```
+
+9. Altere a classificação da tabela `BoxOffice` para 6.0 de todos os filmes que lucraram menos de 300 milhões no mercado internacional e mais de 200 milhões no mercado interno.
+
+    ```sql
+    -- breaking rules 😎
+    SET sql_safe_updates = 0;
+
+    UPDATE Pixar.BoxOffice
+    SET rating = 6.0
+    WHERE domestic_sales > 200000000 AND international_sales < 300000000;
+    ```
+
+10. Exclua todos os filmes com menos de 100 minutos de duração da tabela `Movies`.
+
+    ```sql
+    SELECT id FROM Pixar.Movies
+    WHERE length_minutes < 100;
+    -- SAÍDA: 1, 6, 7, 8
+
+    DELETE FROM Pixar.BoxOffice
+    WHERE movie_id IN (1, 6, 7, 8);
+
+    DELETE FROM Pixar.Movies
+    WHERE id IN (1, 6, 7, 8);
+    ```
