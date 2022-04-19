@@ -101,3 +101,12 @@ USE Pixar;
         BoxOffice AS B ON M.id = B.movie_id
         where B.international_sales > B.domestic_sales;
     ```
+
+3. Com o `INNER JOIN`, faça uma busca que retorne os filmes e sua avaliação (`rating`) em ordem decrescente.
+
+```sql
+SELECT M.title, B.rating FROM Movies AS M
+JOIN BoxOffice AS B
+ON M.id = B.movie_id
+ORDER BY B.rating DESC;
+```
