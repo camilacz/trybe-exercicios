@@ -128,3 +128,14 @@ USE Pixar;
     RIGHT JOIN Movies AS M ON M.theater_id = T.id
     ORDER BY T.name;
     ```
+
+### **Bônus:**
+
+6. Selecione todas as informações dos filmes com avaliação maior que 8.
+
+    ```sql
+    SELECT * FROM Movies AS M
+    JOIN BoxOffice AS B
+    ON B.movie_id = M.id
+    WHERE B.rating > 8;
+    ```
