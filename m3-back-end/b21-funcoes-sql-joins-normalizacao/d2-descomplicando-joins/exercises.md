@@ -104,9 +104,19 @@ USE Pixar;
 
 3. Com o `INNER JOIN`, faça uma busca que retorne os filmes e sua avaliação (`rating`) em ordem decrescente.
 
-```sql
-SELECT M.title, B.rating FROM Movies AS M
-JOIN BoxOffice AS B
-ON M.id = B.movie_id
-ORDER BY B.rating DESC;
-```
+    ```sql
+    SELECT M.title, B.rating FROM Movies AS M
+    JOIN BoxOffice AS B
+    ON M.id = B.movie_id
+    ORDER BY B.rating DESC;
+    ```
+
+4. Utilizando o `LEFT JOIN`, faça uma busca que retorne todos os dados dos cinemas, mesmo os que não possuem filmes em cartaz e adicionalmente, os dados dos filmes que estão em cartaz nestes cinemas. Retorne os nomes dos cinemas em ordem alfabética.
+
+    ```sql
+    SELECT T.name, T.location, M.title
+    FROM Theater AS T
+    LEFT JOIN Movies AS M
+    ON M.theater_id = T.id
+    ORDER BY T.name;
+    ```
