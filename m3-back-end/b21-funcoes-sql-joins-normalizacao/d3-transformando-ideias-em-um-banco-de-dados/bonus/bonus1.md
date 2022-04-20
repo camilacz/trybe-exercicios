@@ -31,3 +31,14 @@
 
 ---
 &nbsp;
+
+4. Converta a seguinte tabela desnormalizada para a 3ª Forma Normal:
+![Terceira Forma Normal](terceira-forma-normal.png)
+
+  	### **Resolução:**
+	* A tabela deve estar na 1ª e 2ª Formas Normais
+	* A tabela não deve conter atributos (colunas) que não sejam dependentes exclusivamente da ***PK*** (chave primária).
+		
+    ![Resolução](normalizacao3.png)
+
+---
