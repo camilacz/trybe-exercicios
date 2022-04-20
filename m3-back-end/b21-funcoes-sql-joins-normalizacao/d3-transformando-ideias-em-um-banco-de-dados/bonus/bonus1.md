@@ -9,13 +9,25 @@
 2. Converta a seguinte tabela desnormalizada para a 1ª Forma Normal:
 ![Primeira tabela desnormalizada](primeira-forma-normal.png)
 
-    ```
-    1ª Forma Normal
-
-    * Colunas devem possuir apenas um valor
-    * Valores em uma coluna devem ser do mesmo tipo de dados
-    * Cada coluna deve possuir um nome único
-    * A ordem dos dados registrados em uma tabela não deve afetar a integridade dos dados
-    ```
+  	### **Resolução:**
+	* Colunas devem possuir apenas um valor
+	* Valores em uma coluna devem ser do mesmo tipo de dados
+	* Cada coluna deve possuir um nome único
+	* A ordem dos dados registrados em uma tabela não deve afetar a integridade dos dados
 
     ![Resolução](normalizacao1.png)
+
+---
+&nbsp;
+
+3. Converta a seguinte tabela desnormalizada para a 2ª Forma Normal:
+![Segunda Forma Normal](segunda-forma-normal.png)
+
+  	### **Resolução:**
+	* A tabela deve estar na 1ª Forma Normal
+	* A tabela não deve possuir dependências parciais
+		
+    ![Resolução](normalizacao2.png)
+
+---
+&nbsp;
