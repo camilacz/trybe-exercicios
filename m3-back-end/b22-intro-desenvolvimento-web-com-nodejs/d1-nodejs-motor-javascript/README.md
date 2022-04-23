@@ -49,7 +49,7 @@
   * Em caso de erro, exiba "Opa, não foi dessa vez. O número era [número gerado]".
   * Ao final, pergunte se a pessoa deseja jogar novamente e volte ao começo do script se sim.
 
-### **Exercícios 6:** Crie um arquivo `index.js` que pergunta qual script deve ser executado.
+### **Exercícios 7:** Crie um arquivo `index.js` que pergunta qual script deve ser executado.
 
   * O arquivo deve ser acionado através do comando `npm start`.
   * O script deve exibir uma lista numerada dos scripts disponíveis.
