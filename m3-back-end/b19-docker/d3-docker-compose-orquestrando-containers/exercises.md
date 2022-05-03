@@ -66,7 +66,6 @@ Por padrão o `ghost` utiliza um `sqlite` interno para salvar as informações, 
 1. Crie um novo serviço para o nosso banco de dados. Podemos utilizar um mysql - imagem `mysql:5.7`.
 2. Defina uma senha root para o *database*. Para tal, utilize a variável `MYSQL_ROOT_PASSWORD`.
 	* *Lembre-se que é possível usar a sintaxe `${}` para passar uma `env` do host para a `env` do container*
-	* *Thankfully, I did not waste my time downloading MySQL. I'm using docker as I should, since I learned that for a reason :). Anyways, no `env` in the host :)))*
 3. Agora configure o service com o ghost para utilizar o MySQL, definindo a variável `database__client` como `mysql`.
 4. Defina o nome `ghost` para o nome do database utilizando a variável `database__connection__database`.
 5. Indique a conexão para o nosso MySQL na env `database__connection__host`.
