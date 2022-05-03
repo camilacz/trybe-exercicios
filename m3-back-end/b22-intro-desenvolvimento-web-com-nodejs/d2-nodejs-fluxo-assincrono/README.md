@@ -28,3 +28,21 @@
   * Crie uma função que leia o arquivo simpsons.json e crie um novo chamado `simpsonFamily.json`, contendo os personagens de `id` 1 a 4.
   * Crie uma função que adicione ao arquivo `simpsonFamily.json` o personagem `Nelson Muntz` ({ id: 8 }).
   * Crie uma função que substitua o personagem `Nelson Muntz` pela personagem `Maggie Simpson` ({ id: 15 }) no arquivo `simpsonFamily.json`.
+
+### **Exercício 5:** Crie uma função que lê e escreve vários ao mesmo tempo.
+  * Utilize o `Promise.all` para manipular vários arquivos ao mesmo tempo.
+  * Faça uma função que crie um arquivo para string da `array`, com nome `file<index + 1>.txt`.
+  ```js
+  const array = ['Finalmente', 'estou', 'usando', 'Promise.all', '!!!'];
+
+  // EXEMPLO:
+  // (string: 'Finalmente')
+  // (nome do arquivo: file1.txt)
+  // (conteúdo: Finalmente)
+  ```
+  * Programe sua função para que ela faça a leitura de todos os arquivos no item anterior, armazene essa informação e escreva num arquivo chamado `fileAll.txt`.
+  ```js
+  // O arquivo fileAll.txt deve conter o seguinte conteúdo:
+  
+  'Finalmente estou usando Promise.all !!!'
+  ```
