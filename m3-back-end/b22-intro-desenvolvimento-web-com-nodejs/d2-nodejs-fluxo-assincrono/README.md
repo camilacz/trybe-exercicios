@@ -15,3 +15,5 @@
     ```js
     Math.floor(Math.random() * 100 + 1)
     ```
+
+### **Exercícios 3:** Reescreva o código do exercício anterior para que ultilize `aync/await`.

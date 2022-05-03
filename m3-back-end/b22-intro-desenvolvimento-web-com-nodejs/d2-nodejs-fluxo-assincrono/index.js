@@ -34,7 +34,7 @@ mathThis(5, 2, 'potato')
 // EXERCÍCIO 2
 const getRandomNumber = () => Math.floor(Math.random() * 100 + 1);
 
-const callMathThis = () => {
+const callMathThis = async () => {
   const randomNumbers = Array.from({ length: 3 }).map(getRandomNumber);
 
   console.log('Números aleatórios: ', randomNumbers);
@@ -42,6 +42,14 @@ const callMathThis = () => {
   mathThis(...randomNumbers)
     .then((result) => console.log(result))
     .catch((err) => console.log(err.message));
+
+  // EXERCÍCIO 3
+  try {
+    const result = await mathThis(...randomNumbers);
+    console.log(result);
+  } catch(err) {
+    console.log(err.message);
+  }
 };
 
 callMathThis();
