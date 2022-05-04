@@ -27,4 +27,11 @@ app.post('/greetings', (req, res) => {
   return res.status(UNAUTHORIZED).json({ message: 'Unauthorized' });
 });
 
+// Exercício 4
+app.put('/users/:name/:age', (req, res) => {
+  const { name, age } = req.params;
+
+  return res.status(SUCCES).json({ message: `Seu nome é ${name} e você tem ${age} anos de idade` });
+});
+
 app.listen(PORT, () => console.log('heeeey :)'));

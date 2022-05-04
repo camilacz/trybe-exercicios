@@ -15,3 +15,6 @@
   * Sua rota deve receber o seguinte JSON: `{ name: <nome do usuário>, age: <idade do usuário> }`
   * Caso a pessoa tenha idade superior a 17 anos, devolva o JSON `{ message: 'Hello, <nome do usuário>!' }` com o status code `200 - OK`
   * Caso o usuário tenha 17 anos ou menos, devolva o JSON: `{ message: 'Unauthorized' }` com o status code `401 - Unauthorized`
+
+### **Exercícios 4:** Crie uma rota `PUT /users/:name/:age`
+  * Sua rota deve retornar o seguinte JSON: `{ message: 'Seu nome é <name> e você tem <age> anos de idade' }`
