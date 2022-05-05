@@ -18,3 +18,34 @@
 
 ### **Exercícios 4:** Crie uma rota `PUT /users/:name/:age`
   * Sua rota deve retornar o seguinte JSON: `{ message: 'Seu nome é <name> e você tem <age> anos de idade' }`
+
+### **Exercícios 5:** Crie uma API de dados dos personagens de Simpsons, utilizando o arquivo `simpsons.json`
+*Os exercícios a seguir deverão ser feitos usando o arquivo `simpsons.json`. Caso dê tudo certo, a resposta deve voltar com status **200 OK**.*
+
+> DICA: Utilize o módulo `fs` do Node para ler/escrever arquivos.
+
+  * **A)** Crie um endpoint `GET /simpsons`
+    * Retorne um array com todos os simpsons
+  * **B)** Crie um endpoint `GET /simpsons/:id`
+    * Retorneo personagem com o id informado na URL
+    * Caso não encontre, retorne o JSON:
+      ```json
+      // STATUS: 404 - Not Found
+      { "message": "simpson not found" }
+      ```
+  * **C)** Crie um endpoint `POST /simpsons`
+    * Este endpoint deve cadastrar novos personagens
+    * O corpo deve receber o JSON:
+      ```json
+      {
+        "id": "<id-do-personagem>",
+        "name": "<nome-do-personagem>"
+      }
+      ```
+    * Caso já exista um personagem com o id informado, devolva o JSON:
+      ```json
+      // STATUS: 409 - Conflict
+      { "message": "id already exists" }
+      ```
+    * Caso o personagem ainda não exista, adicione-o ao arquivo simpsons.json e devolva um body vazio com o status `204 - No Content`.
+      > DICA: use `end()` ao final do retorno para encerrar a requisição sem enviar nenhum dado.
