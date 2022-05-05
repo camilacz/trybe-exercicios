@@ -49,3 +49,41 @@
       ```
     * Caso o personagem ainda não exista, adicione-o ao arquivo simpsons.json e devolva um body vazio com o status `204 - No Content`.
       > DICA: use `end()` ao final do retorno para encerrar a requisição sem enviar nenhum dado.
+
+## **BÔNUS**
+
+### **Exercícios 1:** Adicione autenticação a todos os endpoints.
+  * O token deve ser enviado através do header `Authorization`
+  * Ele deve ter exatamente 16 caracteres
+  * Se for inválido ou inexistente, a resposta deve ser:
+    ```json
+    // STATUS 401 - Unauthorized
+
+    { "message": "Token inválido!" }
+    ```
+
+### **Exercícios 2:** Crie uma rota ``POST /signup`
+  * A rota deve receber, no body, os campos `email`, `password`, `firstName` e `phone`
+  * Se um dos campos não for preenchido, retornar o JSON seguinte:
+    ```json
+    // STATUS 401 - Unauthorized
+
+    { "message": "Missing fiels" }
+    ```
+  * Caso tudo esteja correto, a rota deve gerar um token aleatório válido, e retornar a seguinte resposta:
+      ```json
+      // STATUS 200 - OK
+
+      { "token": "<token-aleatório>" }
+      ```
+  > DICA: Para gerar o token, utilize a função `randomBytes` do módulo `crypto` do Node, dessa forma:
+  >
+  > ```js
+  > const crypto = require('crypto');
+  >
+  > function generateToken() {
+  > return crypto.randomBytes(8).toString('hex');
+  > }
+  >
+  > module.exports = generateToken;
+  > ```
