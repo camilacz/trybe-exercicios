@@ -53,19 +53,19 @@ As seguintes validações  deverão ser realizadas:
   9. `warrantyPeriod` deve ser um número inteiro entre 1 e 3.
   10. Se o campo `warrantyPeriod` não for passado, retorne:
       ```json
-      // STATU 400
+      // STATUS 400
 
       { "message": "O campo warrantyPeriod é obrigatório" }
       ```
   11. Caso o campo `warrantyPeriod` não seja um número entre 1 e 3, retorne:
       ```json
-      // STATU 400
+      // STATUS 400
 
       { "message": "O campo warrantyPeriod precisa estar entre 1 e 3" }
       ```
   12. Se todos os campos forem válidos, retorne a seguinte resposta:
       ```json
-      // STATU 201
+      // STATUS 201
 
       { "message": "Venda cadastrada com sucesso" }
       ```
