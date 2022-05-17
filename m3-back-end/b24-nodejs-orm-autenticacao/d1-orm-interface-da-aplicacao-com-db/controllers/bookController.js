@@ -29,7 +29,7 @@ const create = async (req, res) => {
   const book = { title, author, pageQuantity };
 
   try {
-    const newBook = bookService.create(book);
+    const newBook = await bookService.create(book);
     return res.status(201).json(newBook);
   } catch(err) {
     console.log(err.message);
