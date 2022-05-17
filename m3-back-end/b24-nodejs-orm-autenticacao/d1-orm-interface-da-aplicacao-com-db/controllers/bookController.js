@@ -1,9 +1,15 @@
 const bookService = require('../services/bookService');
 
 const getAll = async (req, res) => {
-  const books = await bookService.getAll();
+  try {
+    const books = await bookService.getAll();
+  
+    return res.status(200).json(books);
+  } catch(err) {
+    console.log(err.message);
 
-  return res.status(200).json(books);
+    return res.status(500).json({ message: 'Falha no engano' });
+  }
 };
 
 module.exports = {
