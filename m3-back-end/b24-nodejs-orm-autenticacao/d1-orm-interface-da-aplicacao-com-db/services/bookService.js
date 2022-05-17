@@ -6,6 +6,12 @@ const getAll = async () => {
   return books;
 };
 
+const getById = async (id) => {
+  const book = Book.findAll({ where: { id } });
+  return book;
+};
+
 module.exports = {
   getAll,
+  getById
 };
