@@ -24,7 +24,21 @@ const getById = async (req, res) => {
   return res.status(200).json(book);
 };
 
+const create = async (req, res) => {
+  const { title, author, pageQuantity } = req.body;
+  const book = { title, author, pageQuantity };
+
+  try {
+    const newBook = bookService.create(book);
+    return res.status(201).json(newBook);
+  } catch(err) {
+    console.log(err.message);
+    return res.status(500).json({ message: 'Algo de errado não deu certo' });
+  }
+};
+
 module.exports = {
   getAll,
   getById,
+  create,
 };
