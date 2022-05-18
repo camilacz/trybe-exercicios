@@ -8,12 +8,16 @@ const getByAuthor = async (req, res) => {
   // Se der errado a gente só chora :')
 };
 
-const getAll = async (_req, res) => {
+const getAll = async (req, res) => {
+  const { author } = req.query;
+
   try {
-    const books = await bookService.getAll();
-  
+    const books = author
+      ? await bookService.getByAuthor(author)
+      : await bookService.getAll();
+
     return res.status(200).json(books);
-  } catch(err) {
+  } catch (err) {
     console.log(err.message);
 
     return res.status(500).json({ message: 'Falha no engano' });
@@ -39,7 +43,7 @@ const create = async (req, res) => {
   try {
     const newBook = await bookService.create(book);
     return res.status(201).json(newBook);
-  } catch(err) {
+  } catch (err) {
     console.log(err.message);
     return res.status(500).json({ message: 'Algo de errado não deu certo' });
   }
@@ -78,5 +82,5 @@ module.exports = {
   getById,
   create,
   update,
-  remove
+  remove,
 };
