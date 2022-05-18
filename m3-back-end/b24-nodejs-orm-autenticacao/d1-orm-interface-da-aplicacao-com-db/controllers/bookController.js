@@ -1,5 +1,13 @@
 const bookService = require('../services/bookService');
 
+const getByAuthor = async (req, res) => {
+  const { author } = req.query;
+
+  const books = await bookService.getByAuthor(author);
+  return res.status(200).json(books);
+  // Se der errado a gente só chora :')
+};
+
 const getAll = async (_req, res) => {
   try {
     const books = await bookService.getAll();
@@ -65,6 +73,7 @@ const remove = async (req, res) => {
 };
 
 module.exports = {
+  getByAuthor,
   getAll,
   getById,
   create,
