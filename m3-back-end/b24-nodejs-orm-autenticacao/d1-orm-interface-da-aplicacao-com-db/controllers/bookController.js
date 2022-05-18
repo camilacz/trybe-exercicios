@@ -52,9 +52,22 @@ const update = async (req, res) => {
   }
 };
 
+const remove = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const result = await bookService.remove(id);
+    return res.status(204).end();
+  } catch (e) {
+    console.log(e.message);
+    return res.status(500).json({ message: 'Deu ruim hein' });
+  }
+};
+
 module.exports = {
   getAll,
   getById,
   create,
-  update
+  update,
+  remove
 };
