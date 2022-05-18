@@ -37,8 +37,8 @@ const getById = async (req, res) => {
 };
 
 const create = async (req, res) => {
-  const { title, author, pageQuantity } = req.body;
-  const book = { title, author, pageQuantity };
+  const { title, author, pageQuantity, publisher } = req.body;
+  const book = { title, author, pageQuantity, publisher };
 
   try {
     const newBook = await bookService.create(book);
@@ -50,10 +50,10 @@ const create = async (req, res) => {
 };
 
 const update = async (req, res) => {
-  const { title, author, pageQuantity } = req.body;
+  const { title, author, pageQuantity, publisher } = req.body;
   const { id } = req.params;
 
-  const book = { title, author, pageQuantity };
+  const book = { title, author, pageQuantity, publisher };
 
   try {
     const updated = await bookService.update(id, book);
