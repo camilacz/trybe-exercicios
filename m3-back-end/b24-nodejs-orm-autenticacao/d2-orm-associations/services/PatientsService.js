@@ -22,7 +22,11 @@ const getAllPatientsSurgeries = async () => {
 
 const getPatientsByPlan = async (planId) => {
   const results = await Patients.findAll({
-    where: { plan_id: planId }
+    where: { plan_id: planId },
+    include: {
+      model: Plans, as: 'plan',
+    },
+    attributes: { exclude: ['plan_id'] },
   });
 
   return results;
