@@ -13,7 +13,7 @@ const getAllPatientsPlans = async () => {
 const getAllPatientsSurgeries = async () => {
   const results = await Patients.findAll({
     include: {
-      model: Surgeries, as: 'surgerires', through: { attributes: [] },
+      model: Surgeries, as: 'surgeries', through: { attributes: [] },
     }
   });
 
