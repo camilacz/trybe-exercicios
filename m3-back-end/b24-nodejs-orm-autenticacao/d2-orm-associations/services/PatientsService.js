@@ -20,7 +20,16 @@ const getAllPatientsSurgeries = async () => {
   return results;
 }
 
+const getPatientsByPlan = async (planId) => {
+  const results = await Patients.findAll({
+    where: { plan_id: planId }
+  });
+
+  return results;
+};
+
 module.exports = {
   getAllPatientsPlans,
   getAllPatientsSurgeries,
+  getPatientsByPlan,
 };
