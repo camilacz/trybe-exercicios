@@ -17,7 +17,21 @@ const getAllPatientsSurgeries = async (_req, res) => {
   }
 };
 
+const getPatientsByPlan = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const results = await PatientsService.getPatientsByPlan(id);
+
+    return res.status(200).json(results);
+  } catch (err) {
+    console.log(err.message);
+    return res.status(500).json({ message: 'Falha no engano' });
+  }
+};
+
 module.exports = {
   getAllPatientsPlans,
   getAllPatientsSurgeries,
+  getPatientsByPlan,
 }
