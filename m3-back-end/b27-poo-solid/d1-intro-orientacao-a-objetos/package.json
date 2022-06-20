@@ -1,0 +1,16 @@
+{
+  "name": "d1-intro-orientacao-a-objetos",
+  "version": "1.0.0",
+  "description": "## DIA 1 - Introdução à Orientação a Objetos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.18.0",
+    "typescript": "^4.7.4"
+  }
+}
