@@ -15,6 +15,20 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "no-underscore-dangle": 0
+        "no-underscore-dangle": 0,
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+              "ts": "never"
+            }
+         ]
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+              "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+          }
     }
 }
