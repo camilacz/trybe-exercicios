@@ -16,7 +16,10 @@
   * Primeiro, crie três classes:
 
     1. Uma que represente um cliente, a qual deve conter o nome da pessoa.
-
     2. Outra que represente um pedido, contendo cliente, os itens consumidos, a forma de pagamento e o percentual de desconto (em decimal), sendo que o pedido pode ou não possuir desconto.
-
     3. Mais uma classe que represente um item pedido, que deve conter o nome do pedido (ex.: "Batatas fritas").
+
+  * Agora, adicione os seguintes comportamentos à classe de pedidos:
+
+    1. Um método que calcula o total do pedido.
+    2. Outro método que calcula o total aplicando o valor do desconto.

@@ -52,4 +52,11 @@ export default class Order {
 
     this._discount = value;
   }
+
+  calcItemsPrice = () => this._items.reduce((acc, { price }) => price + acc, 0);
+
+  calcTotal = () => {
+    const itemsPrice = this.calcItemsPrice();
+    return (itemsPrice * this._discount);
+  };
 }
