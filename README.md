@@ -1,4 +1,4 @@
-Neste repositório se encontram todas as atividades de aprendizagem desenvolvidas por Camila Zegarra enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
+Neste repositório se encontram todas as atividades de aprendizagem desenvolvidas por mim, [Camila Zegarra](https://www.linkedin.com/in/camila-cz/) enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
 
 _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vida e construir uma carreira de sucesso em tecnologia, onde a pessoa só paga quando conseguir um bom trabalho."_
 
@@ -164,7 +164,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 22-3: _Mocha, Chai e Sinon - Testes de Back-end com Node.js_
 - [X] 22-4: _Express - HTTP com Node.js_
 - [X] 22-5: _Express - Middlewares_
-- [X] 22-6: _Projeto - Talker Manager_
+- [X] 22-6: _[Projeto - Talker Manager](https://github.com/camilacz/projeto-talker-manager)_
 
 ##### Bloco 23: Node.js - Arquitetura Web e de Software
 
@@ -172,12 +172,62 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 23-2: _Arquitetura de Software - Camadas de Controller e Service_
 - [X] 23-3: _Arquitetura Web - Rest e Restful_
 - [X] 23-4: _Arquitetura de Software - Testando as camadas_
-- [X] 23-5: _Projeto - Store Manager_
+- [X] 23-5: _[Projeto - Store Manager](https://github.com/camilacz/store-manager)_
 
 ##### Bloco 24: Node.js - ORM e Autenticação
 
 - [X] 24-1: _ORM - Interface da aplicação com o banco de dados_
 - [X] 24-2: _ORM - Associantions_
-- [ ] 24-3: _JWT (JSON Web Token)_
-- [ ] 24-4: _Testando APIs com Testes de Integração_
-- [ ] 24-5: _Projeto - API de Blogs_ 
+- [X] 24-3: _JWT (JSON Web Token)_
+- [X] 24-4: _Testando APIs com Testes de Integração_
+- [X] 24-5: _[Projeto - API de Blogs](https://github.com/camilacz/blogs-api)_ 
+
+##### Bloco 25: Deployment
+
+- [X] 25-1: _Infraestrutura - Deploy com Heroku_
+- [X] 25-2: _Deploy Docker & Heroku_
+- [X] 25-3: _Projeto - Stranger Things_
+
+##### Bloco 26: TypeScript
+
+- [X] 26-1: _Introdução ao TypeScript_
+- [X] 26-2: _Tipagem estática e Generics_
+- [X] 26-3: _Express com TypeScript_
+- [X] 26-4: _Projeto - Trybe Smith_
+
+##### Bloco 27: Programação Orientada a Objetos (POO) e SOLID
+
+- [X] 27-1: _Introdução à Orientação a Objetos_
+- [X] 27-2: _Herança e Interfaces_
+- [X] 27-3: _Polimorfismo_
+- [X] 27-4: _SOLID - Introdução e Princípios S, O e D_
+- [X] 27-5: _SOLID - Princípios L e I_
+- [ ] 27-6: _Projeto - Trybers and Dragons_
+
+##### Bloco 28: Projeto
+
+- [ ] 28-1: _TFC - Trybe Futebol Clube_
+
+##### Bloco 29: Introdução a MongoDB
+
+- [ ] 29-1: _Introdução a NoSQL e MongoDB_
+- [ ] 29-2: _Filter Operators_
+- [ ] 29-3: _Operadores de consulta_
+- [ ] 29-4: _Updates Simples_
+- [ ] 29-5: _Updates Complexos - Arrays_
+- [ ] 29-6: _Projeto - Commerce_
+
+##### Bloco 30: MongoDB com Node.js e POO
+
+- [ ] 30-1: _MongoDB e arquitetura MSC_
+- [ ] 30-2: _MongoDB e POO_
+- [ ] 30-3: _Projeto - Car Shop_
+
+##### Bloco 31: Projeto
+
+- [ ] 31-1: _App de Delivery_
+
+##### Bloco 32: MasterClass - VPS, CI/CD
+
+- [ ] 32-1: _Dia 1 - VPS_
+- [ ] 32-2: _Dia 2_
